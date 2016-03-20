@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+override_dh_auto_configure:
+	chmod +x configure
+	./configure --prefix=/usr --enable-gui
+
+%:
+	dh $@ --with python2

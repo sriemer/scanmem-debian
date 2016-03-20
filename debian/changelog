@@ -1,0 +1,167 @@
+scanmem (0.13-1) unstable; urgency=low
+
+  * New upstream release:
+    + Dropped gameconqueror-man-page-fix.diff patch, merged upstream.
+  * debian/control:
+    + Updated Standards-Version to 3.9.3
+    + Bumped debhelper dependency to >=9 for hardening support.
+  * debian/compat:
+    + Set to 9 for hardening support.
+  * debian/copyright:
+    + Updated to copyright-format 1.0
+  * debian/rules:
+    + Fixed permission for configure script.
+  * debian/docs:
+    + Do not install old NEWS file.
+
+ -- Kartik Mistry <kartik@debian.org>  Fri, 02 Nov 2012 16:52:43 +0530
+
+scanmem (0.12-2) unstable; urgency=low
+
+  [Kartik Mistry]
+  * debian/rules:
+    + Use dh7
+  * debian/patches/gameconqueror-man-page-fix.diff:
+    + Added patch to fix gameconqueror.1 manpage mistakes
+  * debian/control:
+    + Removed dependency on cdbs
+    + Updated python dependency for Build-Depends/Depends for dh_python2 use
+    + Updated Standards-Version to 3.9.2
+
+ -- Kartik Mistry <kartik@debian.org>  Sun, 03 Jul 2011 17:36:30 +0530
+
+scanmem (0.12-1) unstable; urgency=low
+
+  [WANG Lu]
+  * New upstream release:
+    + Ignore empty values in cheat list
+    + Resizable process lit dialog
+    + Skip when /proc/pid/exe is not available
+    + Run as root now, in order to read remote memory in Ubuntu
+    + Fix a problem with bytearray displaying
+    + Wildcard support in bytearray writing
+    + A memory leak fix
+    + Use monospace font
+    + Fix a string parsing problem
+
+  [Kartik Mistry]
+  * debian/control:
+    + Updated Standards-Version to 3.9.1
+    + Fixed package description for gnomeconqueror
+  * debian/copyright:
+    + Added missing author, updated copyright years
+    + Updated to latest DEP-5 specifications
+
+ -- WANG Lu <coolwanglu@gmail.com>  Tue, 19 Apr 2011 23:49:05 +0530
+
+scanmem (0.11-1) unstable; urgency=low
+
+  [WANG Lu]
+  * Fix build on Debian-kfreebsd* (Closes: #578457)
+  * Fix an issue of freezing when scanning for multiple variables
+  * Added a new debian/watch file
+
+  [Kartik Mistry]
+  * debian/copyright:
+    + Fixed for DEP-5 specifications
+  * debian/gnomeconqueror.manpages:
+    + Fixed manpage path
+
+ -- WANG Lu <coolwanglu@gmail.com>  Sun, 16 May 2010 23:38:59 +0530
+
+scanmem (0.10-1) unstable; urgency=low
+
+  [WANG Lu]
+  * New upstream release:
+    + Added GUI for program as GameConqueror, separated binary package
+  * debian/control:
+    + Updated Standards-Version to 3.8.4
+    + Added Kartik Mistry <kartik@debian.org> as Uploader now
+    + Updated Homepage entry
+  * debian/rules:
+    + Used CDBS to simplyfy rules, dh will follow with next upload
+
+  [Kartik Mistry]
+  * Added manpage for GameConqueror, debian/gameconqueror.1
+  * Converted package to use source format 3.0 (quilt)
+
+ -- WANG Lu <coolwanglu@gmail.com>  Fri, 16 Apr 2010 08:54:03 +0530
+
+scanmem (0.07-8) unstable; urgency=low
+
+  * debian/control:
+    + Build-Depends on libreadline-dev instead of libreadline5-dev
+    + Updated Standards-Version to 3.8.3
+    + Wrapped up Build-Depends
+    + Updated debhelper dependency to 7.0.50~
+    + Removed dependency on cdbs, no longer needed as we use dh now
+  * debian/rules:
+    + dh usage instead of cdbs
+  * debian/copyright:
+    + Don't point to versionless symlink in /usr/share/common-licenses
+
+ -- Kartik Mistry <kartik@debian.org>  Sun, 13 Sep 2009 23:13:09 +0530
+
+scanmem (0.07-7) unstable; urgency=low
+
+  * debian/control:
+    + Updated my maintainer email address
+    + Removed Torsten from Uploader as package is not part of bollin
+    + Removed VCS-* fields
+    + Updated Standards-Version to 3.8.1 (no changes needed)
+  * debian/copyright:
+    + [Lintian] Updated to use correct copyright symbol ©
+    + Updated Debian copyright information
+
+ -- Kartik Mistry <kartik@debian.org>  Mon, 15 Jun 2009 11:35:08 +0530
+
+scanmem (0.07-6) unstable; urgency=low
+
+  * upload to unstable
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 15 Feb 2009 22:56:55 +0100
+
+scanmem (0.07-5) experimental; urgency=low
+
+  [ Kartik Mistry ]
+  * debian/control:
+    + Much better short description, Thanks to adn
+
+  [ Torsten Werner ]
+  * Bump up Standards-Version: 3.8.0 (no changes).
+
+ -- Torsten Werner <twerner@debian.org>  Sun, 28 Dec 2008 18:09:32 +0100
+
+scanmem (0.07-4) unstable; urgency=low
+
+  * debian/control:
+    + Updated short and long descriptions
+    + Fixed typo of Linux
+  * debian/copyright:
+    + Added license of install-sh
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Mon, 25 Feb 2008 22:22:05 +0530
+
+scanmem (0.07-3) unstable; urgency=low
+
+  * debian/control:
+    + Updated Standards-Version to 3.7.3
+    + Fixed Homepage entry
+  * debian/copyright:
+    + Fixed copyright year
+    + Updated link of GPL
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Fri, 28 Dec 2007 10:15:08 +0530
+
+scanmem (0.07-2) unstable; urgency=low
+
+  * debian/control: updated homepage as real control field
+  * debian/copyright: moved copyright out of license section
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Sat, 17 Nov 2007 23:10:44 +0530
+
+scanmem (0.07-1) unstable; urgency=low
+
+  * Initial release (Closes: #423424)
+
+ -- Kartik Mistry <kartik.mistry@gmail.com>  Sat,  4 Aug 2007 19:42:34 +0530
