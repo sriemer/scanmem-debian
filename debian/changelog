@@ -1,3 +1,20 @@
+scanmem (0.15.7-1) UNRELEASED; urgency=high
+
+  * New upstream release:
+    + Major changes in 5 years of development since v0.13
+    + Fixed bugs all over the place (including security bugs)
+    + Migrated the GUI to GTK 3
+    + Improved backend communication by creation of libscanmem
+    + Added GameConqueror translations Japanese and Russian
+    + Migrated the GUI gksu to PolicyKit/pkexec
+    + Implemented region type and load address support against ASLR
+    + Implemented endianness support
+    + Implemented full Python 3 support for the GUI
+    + Optimized scan performance
+    + Creation of the Python cache for source distros
+
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 26 Apr 2016 15:14:53 +0200
+
 scanmem (0.13-1) unstable; urgency=low
 
   * New upstream release:
