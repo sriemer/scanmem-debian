@@ -1,8 +1,11 @@
 #!/usr/bin/make -f
 
-override_dh_auto_configure:
-	chmod +x configure
-	./configure --prefix=/usr --enable-gui
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
 
 %:
 	dh $@ --with python2
+
+override_dh_auto_configure:
+	dh_auto_configure -- --enable-gui
