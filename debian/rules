@@ -8,4 +8,5 @@ include /usr/share/dpkg/buildflags.mk
 	dh $@ --with python2
 
 override_dh_auto_configure:
+	./autogen.sh
 	dh_auto_configure -- --enable-gui
