@@ -1,4 +1,4 @@
-scanmem (0.15.7-1) UNRELEASED; urgency=high
+scanmem (0.15.7-1) unstable; urgency=high
 
   * New upstream release:
     + Major changes in 5 years of development since v0.13
@@ -12,8 +12,30 @@ scanmem (0.15.7-1) UNRELEASED; urgency=high
     + Implemented full Python 3 support for the GUI
     + Optimized scan performance
     + Creation of the Python cache for source distros
+  * debian/watch:
+    + Updated for new project location on GitHub
+  * debian/control:
+    + Updated Standards-Version to 3.9.8
+    + Set Sebastian Parschauer as the new package maintainer
+    + Moved Lu Wang to uploaders
+    + Updated the homepage to the new project location on GitHub
+    + Updated all dependencies for the new upstream code
+  * debian/copyright:
+    + Set everything to GPL-3+ and dropped GPL-2+ like upstream did
+    + Set Sebastian Parschauer as the primary uptream maintainer
+    + Set new source location on GitHub
+    + Added the copyright information of Sebastian Parschauer
+  * debian/gameconqueror.install:
+    + Updated for new upstream code
+  * debian/gameconqueror.manpages:
+    + Use the upstream man page
+  * debian/scanmem.install:
+    + Add libscanmem.so*
+  * debian/rules:
+    + Build with hardening
+    + Run autogen.sh before dh_auto_configure
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 26 Apr 2016 15:14:53 +0200
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Wed, 27 Apr 2016 18:13:55 +0200
 
 scanmem (0.13-1) unstable; urgency=low
 
