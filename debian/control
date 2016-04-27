@@ -1,19 +1,23 @@
 Source: scanmem
 Section: utils
 Priority: extra
-Maintainer: WANG Lu <coolwanglu@gmail.com>
-Uploaders: Kartik Mistry <kartik@debian.org>
-Build-Depends: debhelper (>= 9),
-               autotools-dev,
+Maintainer: Sebastian Parschauer <s.parschauer@gmx.de>
+Uploaders: WANG Lu <coolwanglu@gmail.com>, Kartik Mistry <kartik@debian.org>
+Build-Depends: autotools-dev,
+               debhelper (>= 9),
+               dh-python,
+               intltool,
                libreadline-dev,
-               python (>= 2.6.6-3~)
-Standards-Version: 3.9.3
-Homepage: http://code.google.com/p/scanmem/
+               libtool,
+               python (>= 2.7)
+Standards-Version: 3.9.8
+X-Python-Version: >= 2.7
+Homepage: https://github.com/scanmem/scanmem
 
 Package: scanmem
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Suggests: gameconqueror (>= 0.12)
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Suggests: gameconqueror (>= 0.15.7)
 Description: Program to locate and modify a variable in a running process
  Scanmem is a simple interactive debugging utility for Linux, used to locate
  the address of a variable in a running process. This can be used for the
@@ -22,11 +26,13 @@ Description: Program to locate and modify a variable in a running process
 
 Package: gameconqueror
 Architecture: all
-Depends: ${misc:Depends},
-         gksu,
-         python (>= 2.6.6-3~),
-         python-gtk2,
-         scanmem (>= 0.12)
+Depends: gir1.2-gtk-3.0,
+         policykit-1,
+         python (>= 2.7),
+         python-gi,
+         scanmem (>= 0.15.7),
+         ${misc:Depends},
+         ${python:Depends}
 Description: GUI for scanmem, a game hacking tool
  Scanmem is a simple interactive debugging utility for Linux, used to locate
  the address of a variable in a running process. This can be used for the
