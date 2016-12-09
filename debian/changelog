@@ -1,3 +1,9 @@
+scanmem (0.16-1) unstable; urgency=high
+
+  * New upstream release
+
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 06 Dec 2016 22:02:35 +0100
+
 scanmem (0.15.7-1) unstable; urgency=high
 
   * New upstream release:

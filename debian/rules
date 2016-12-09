@@ -9,4 +9,4 @@ include /usr/share/dpkg/buildflags.mk
 
 override_dh_auto_configure:
 	./autogen.sh
-	dh_auto_configure -- --enable-gui
+	dh_auto_configure -- --enable-gui --libdir=/usr/lib/scanmem
