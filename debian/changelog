@@ -1,8 +1,31 @@
 scanmem (0.16-1) unstable; urgency=high
 
-  * New upstream release
+  * New upstream release:
+    + ranges support ("n..m" command)
+    + exact float matching (depends on ranges)
+    + Android support
+    + GTK 3.22 support
+    + GUI usability improvements
+    + GUI command line option parsing
+    + GUI uses absolute path to libscanmem.so.1
+    + GUI: setting the length when manually adding a string/bytearray
+    + license change to LGPL-3 for libscanmem
+    + deployment of include headers for a libscanmem-dev package
+    + Python 3 Unicode conversion bugfixes
+    + scan input handling bugfixes
+    + GUI resize issues resolved
+    + several further GUI issues fixed
+    + fixed the watch handler to respect match flags
+    + full rework of man pages
+    + reworked scanmem version printing and root warning
+  * debian:
+    + separate libscanmem1 and libscanmem-dev packages
+  * debian/copyright:
+    + update to state of 2016
+  * debian/rules:
+    + simplify hardening
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 06 Dec 2016 22:02:35 +0100
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Sat, 17 Dec 2016 18:48:12 +0100
 
 scanmem (0.15.7-1) unstable; urgency=high
 
