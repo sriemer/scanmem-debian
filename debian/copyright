@@ -7,8 +7,7 @@ Upstream-Contact:
  WANG Lu <coolwanglu(a)gmail.com>.
 
 Files: commands.* handlers.* interrupt.* licence.* list.* maps.* menu.*
-       ptrace.* scanmem.* scanroutines.* show_message.*
-       target_memory_info_array.* value.*
+       ptrace.* scanmem.* scanroutines.* show_message.* targetmem.* value.*
 Copyright: 2006, 2007, 2009 Tavis Ormandy <taviso@sdf.lonestar.org>
            2009 Eli Dupree <elidupree@charter.net>
            2009-2015 WANG Lu <coolwanglu@gmail.com>
