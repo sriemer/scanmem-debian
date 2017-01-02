@@ -1,3 +1,2 @@
 usr/include/scanmem/*
-usr/lib/*/libscanmem.a
 usr/lib/*/libscanmem.so
