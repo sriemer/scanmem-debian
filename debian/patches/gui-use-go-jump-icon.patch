@@ -1,0 +1,35 @@
+From a3ea879189f044368464d48753f95dbbac605c85 Mon Sep 17 00:00:00 2001
+From: Sebastian Parschauer <s.parschauer@gmx.de>
+Date: Wed, 21 Dec 2016 17:03:19 +0100
+Subject: gui: Replace icon 'gtk-jump-to' with 'go-jump'
+
+The icon name 'gtk-jump-to' is deprecated. A symlink to the real
+icon file name ('go-jump') is used. On Debian Stretch with GTK 3.22
+the 'gtk-jump-to' symlink has been removed so that the icon is not
+shown in the hexview.
+
+So replace that icon name with 'go-jump'.
+
+Fixes: 655e283debcf ("GameConqueror.xml: Replace GtkImage:stock with 'icon-name'")
+Fixes #236
+
+Last-Update: 2017-01-02
+
+Patch-Name: gui-use-go-jump-icon.patch
+---
+ gui/GameConqueror.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gui/GameConqueror.xml b/gui/GameConqueror.xml
+index 8ce539f..e94b805 100644
+--- a/gui/GameConqueror.xml
++++ b/gui/GameConqueror.xml
+@@ -60,7 +60,7 @@ along with GameConqueror.  If not, see <http://www.gnu.org/licenses/>.
+   <object class="GtkImage" id="jumpto_image">
+     <property name="visible">True</property>
+     <property name="can_focus">False</property>
+-    <property name="icon_name">gtk-jump-to</property>
++    <property name="icon_name">go-jump</property>
+   </object>
+   <object class="GtkWindow" id="MemoryEditor_Window">
+     <property name="height_request">280</property>
