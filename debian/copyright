@@ -6,6 +6,12 @@ Upstream-Contact:
  Andrea Stacchiotti <andreastacchiotti(a)gmail.com>,
  WANG Lu <coolwanglu(a)gmail.com>.
 
+Files: *
+Copyright: 2006, 2007, 2009 Tavis Ormandy <taviso@sdf.lonestar.org>
+           2009-2015 WANG Lu <coolwanglu@gmail.com>
+           2014-2016 Sebastian Parschauer <s.parschauer@gmx.de>
+License: GPL-3+
+
 Files: commands.* handlers.* interrupt.* licence.* list.* maps.* menu.*
        ptrace.* scanmem.* scanroutines.* show_message.* targetmem.* value.*
 Copyright: 2006, 2007, 2009 Tavis Ormandy <taviso@sdf.lonestar.org>
@@ -26,12 +32,6 @@ Copyright: 2006, 2007, 2009 Tavis Ormandy <taviso@sdf.lonestar.org>
            2016 Sebastian Parschauer <s.parschauer@gmx.de>
 License: GPL-3+
 
-Files: gui/hexview.py
-Copyright: 2008, 2009 Adriano Monteiro Marques
-           2010, 2011, 2013 WANG Lu <coolwanglu@gmail.com>
-           2015 Sebastian Parschauer <s.parschauer@gmx.de>
-License: GPL-3+
-
 Files: gui/*
 Copyright: 2009, 2010, 2011 WANG Lu <coolwanglu@gmail.com>
            2010, Bryan Cain
@@ -39,10 +39,10 @@ Copyright: 2009, 2010, 2011 WANG Lu <coolwanglu@gmail.com>
            2016 Andrea Stacchiotti <andreastacchiotti(a)gmail.com>
 License: GPL-3+
 
-Files: *
-Copyright: 2006, 2007, 2009 Tavis Ormandy <taviso@sdf.lonestar.org>
-           2009-2015 WANG Lu <coolwanglu@gmail.com>
-           2014-2016 Sebastian Parschauer <s.parschauer@gmx.de>
+Files: gui/hexview.py
+Copyright: 2008, 2009 Adriano Monteiro Marques
+           2010, 2011, 2013 WANG Lu <coolwanglu@gmail.com>
+           2015 Sebastian Parschauer <s.parschauer@gmx.de>
 License: GPL-3+
 
 Files: debian/*
