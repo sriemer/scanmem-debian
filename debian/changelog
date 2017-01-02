@@ -10,7 +10,6 @@ scanmem (0.16-1) unstable; urgency=medium
     + GUI uses absolute path to libscanmem.so.1
     + GUI: setting the length when manually adding a string/bytearray
     + license change to LGPL-3 for libscanmem
-    + deployment of include headers for a libscanmem-dev package
     + Python 3 Unicode conversion bugfixes
     + scan input handling bugfixes
     + GUI resize issues resolved
@@ -19,16 +18,17 @@ scanmem (0.16-1) unstable; urgency=medium
     + full rework of man pages
     + reworked scanmem version printing and root warning
   * debian:
-    + separate libscanmem1 and libscanmem-dev packages
     + removed 'dirs' and 'docs'
   * debian/control:
     + reworked package descriptions
   * debian/copyright:
     + update to state of 2016
+  * debian/patches:
+    + gui: Replace icon 'gtk-jump-to' with 'go-jump'
   * debian/rules:
     + simplified hardening
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Mon, 02 Jan 2017 18:51:47 +0100
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Mon, 02 Jan 2017 21:05:55 +0100
 
 scanmem (0.15.7-1) UNRELEASED; urgency=medium
 
