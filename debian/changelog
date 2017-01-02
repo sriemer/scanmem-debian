@@ -1,4 +1,4 @@
-scanmem (0.16-1) unstable; urgency=high
+scanmem (0.16-1) unstable; urgency=medium
 
   * New upstream release:
     + ranges support ("n..m" command)
@@ -20,14 +20,17 @@ scanmem (0.16-1) unstable; urgency=high
     + reworked scanmem version printing and root warning
   * debian:
     + separate libscanmem1 and libscanmem-dev packages
+    + removed 'dirs' and 'docs'
+  * debian/control:
+    + reworked package descriptions
   * debian/copyright:
     + update to state of 2016
   * debian/rules:
-    + simplify hardening
+    + simplified hardening
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Sat, 17 Dec 2016 18:48:12 +0100
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Mon, 02 Jan 2017 18:51:47 +0100
 
-scanmem (0.15.7-1) unstable; urgency=high
+scanmem (0.15.7-1) UNRELEASED; urgency=medium
 
   * New upstream release:
     + Major changes in 5 years of development since v0.13
