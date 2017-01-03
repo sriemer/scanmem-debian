@@ -17,7 +17,7 @@ Homepage: https://github.com/scanmem/scanmem
 Package: scanmem
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Suggests: gameconqueror (= ${binary:Version})
+Suggests: gameconqueror (= ${source:Version})
 Description: locate and modify a variable in a running process
  Scanmem is a simple interactive debugging utility for Linux, used to locate
  the address of a variable in a running process. This can be used for the
@@ -25,12 +25,12 @@ Description: locate and modify a variable in a running process
  reverse engineering, or as a "pokefinder" to cheat at video games.
 
 Package: gameconqueror
-Architecture: any
+Architecture: all
 Depends: gir1.2-gtk-3.0,
          policykit-1,
-         python (>= 2.7),
          python-gi,
-         scanmem (= ${binary:Version}),
+         scanmem (<< ${source:Upstream-Version}.0~),
+         scanmem (>= ${source:Version}),
          ${misc:Depends},
          ${python:Depends}
 Description: locate and modify a variable in a running process (GUI)
