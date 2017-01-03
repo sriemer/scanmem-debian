@@ -21,6 +21,7 @@ scanmem (0.16-1) unstable; urgency=medium
     + removed 'dirs' and 'docs'
   * debian/control:
     + reworked package descriptions
+    + reworked GUI depends
   * debian/copyright:
     + update to state of 2016
   * debian/patches:
@@ -28,7 +29,7 @@ scanmem (0.16-1) unstable; urgency=medium
   * debian/rules:
     + simplified hardening
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Mon, 02 Jan 2017 21:05:55 +0100
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 03 Jan 2017 21:31:21 +0100
 
 scanmem (0.15.7-1) UNRELEASED; urgency=medium
 
