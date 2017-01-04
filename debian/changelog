@@ -17,6 +17,7 @@ scanmem (0.16-1) unstable; urgency=medium
     + fixed the watch handler to respect match flags
     + full rework of man pages
     + reworked scanmem version printing and root warning
+    + Closes: #618464, #689057, #822604
   * debian:
     + removed 'dirs' and 'docs'
   * debian/control:
@@ -29,7 +30,7 @@ scanmem (0.16-1) unstable; urgency=medium
   * debian/rules:
     + simplified hardening
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 03 Jan 2017 21:31:21 +0100
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Wed, 04 Jan 2017 18:23:30 +0100
 
 scanmem (0.15.7-1) UNRELEASED; urgency=medium
 
