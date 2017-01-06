@@ -8,3 +8,6 @@ export DEB_BUILD_MAINT_OPTIONS := hardening=+all
 override_dh_auto_configure:
 	./autogen.sh
 	dh_auto_configure -- --enable-gui --libdir=/usr/lib/scanmem
+
+override_dh_makeshlibs:
+	dh_makeshlibs -Xlibscanmem
