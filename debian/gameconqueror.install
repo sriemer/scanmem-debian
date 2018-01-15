@@ -3,7 +3,7 @@ usr/share/appdata/*appdata.xml
 usr/share/applications/GameConqueror.desktop
 usr/share/gameconqueror/*.png
 usr/share/gameconqueror/*.py
-usr/share/gameconqueror/*.xml
+usr/share/gameconqueror/*.ui
 usr/share/icons/hicolor/*
 usr/share/locale/*/LC_MESSAGES/GameConqueror.mo
 usr/share/polkit-1/actions/*
