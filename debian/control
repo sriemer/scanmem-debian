@@ -2,7 +2,6 @@ Source: scanmem
 Section: utils
 Priority: extra
 Maintainer: Sebastian Parschauer <s.parschauer@gmx.de>
-Uploaders: WANG Lu <coolwanglu@gmail.com>, Kartik Mistry <kartik@debian.org>
 Build-Depends: autotools-dev,
                debhelper (>= 9),
                dh-python,
