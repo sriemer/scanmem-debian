@@ -1,6 +1,6 @@
 Source: scanmem
 Section: utils
-Priority: extra
+Priority: optional
 Maintainer: Sebastian Parschauer <s.parschauer@gmx.de>
 Build-Depends: autotools-dev,
                debhelper (>= 9),

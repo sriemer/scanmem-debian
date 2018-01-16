@@ -22,11 +22,13 @@ scanmem (0.17-1) unstable; urgency=medium
     + gui: add a refresh button in hexview
     + gui: drop hexview data caching (showed obsolete data)
     + lang: add de, es, it, sr_ME
+  * debian/control:
+    + change priority from 'extra' to 'optional'
+  * debian/gameconqueror.install:
+    + adapt to *.xml to *.ui renaming
   * debian/patches:
     + remove all superseded patches
     + configure: add `AM_PROG_CC_C_O` macro
-  * debian/gameconqueror.install:
-    + adapt to *.xml to *.ui renaming
 
  -- Sebastian Parschauer <s.parschauer@gmx.de>  Mon, 15 Jan 2018 08:24:09 +0100
 
