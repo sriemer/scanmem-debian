@@ -22,6 +22,7 @@ scanmem (0.17-1) unstable; urgency=medium
     + gui: add a refresh button in hexview
     + gui: drop hexview data caching (showed obsolete data)
     + lang: add de, es, it, sr_ME
+  * debian: use Python3 now
   * debian/control:
     + change priority from 'extra' to 'optional'
   * debian/gameconqueror.install:
@@ -29,8 +30,9 @@ scanmem (0.17-1) unstable; urgency=medium
   * debian/patches:
     + remove all superseded patches
     + configure: add `AM_PROG_CC_C_O` macro
+    + gui: use Python3 shebang
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Mon, 15 Jan 2018 08:24:09 +0100
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 16 Jan 2018 09:33:56 +0100
 
 scanmem (0.16-1) unstable; urgency=medium
 

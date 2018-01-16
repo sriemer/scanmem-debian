@@ -8,9 +8,9 @@ Build-Depends: autotools-dev,
                intltool,
                libreadline-dev,
                libtool,
-               python (>= 2.7)
+               python3 (>= 3.0)
 Standards-Version: 3.9.8
-X-Python-Version: >= 2.7
+X-Python3-Version: >= 3.0
 Homepage: https://github.com/scanmem/scanmem
 
 Package: scanmem
@@ -27,11 +27,11 @@ Package: gameconqueror
 Architecture: all
 Depends: gir1.2-gtk-3.0,
          policykit-1,
-         python-gi,
+         python3-gi,
          scanmem (<< ${source:Upstream-Version}.0~),
          scanmem (>= ${source:Version}),
          ${misc:Depends},
-         ${python:Depends}
+         ${python3:Depends}
 Description: locate and modify a variable in a running process (GUI)
  GameConqueror is a GUI based on Python and GTK using scanmem to locate
  the address of a variable in a running process. This can be used for the

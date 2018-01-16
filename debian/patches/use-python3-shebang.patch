@@ -1,0 +1,22 @@
+From dcf5601900b5bca6d0982f8d8838b4f05cd91b7d Mon Sep 17 00:00:00 2001
+From: Sebastian Parschauer <s.parschauer@gmx.de>
+Date: Tue, 16 Jan 2018 09:53:10 +0100
+Subject: [PATCH] gui: Use python3 shebang
+
+Last-Update: 2018-01-16
+
+Patch-Name: use-python3-shebang.patch
+---
+ gui/GameConqueror.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gui/GameConqueror.py b/gui/GameConqueror.py
+index e851967..53546fa 100644
+--- a/gui/GameConqueror.py
++++ b/gui/GameConqueror.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python3
+ """
+     Game Conqueror: a graphical game cheating tool, using scanmem as its backend
+     
