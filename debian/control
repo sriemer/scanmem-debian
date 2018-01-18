@@ -2,8 +2,8 @@ Source: scanmem
 Section: utils
 Priority: optional
 Maintainer: Sebastian Parschauer <s.parschauer@gmx.de>
-Build-Depends: autotools-dev,
-               debhelper (>= 11),
+Uploaders: Kartik Mistry <kartik@debian.org>
+Build-Depends: debhelper (>= 11),
                dh-python,
                intltool,
                libreadline-dev,
@@ -35,7 +35,7 @@ Depends: gir1.2-gtk-3.0,
          ${misc:Depends},
          ${python3:Depends}
 Description: locate and modify a variable in a running process (GUI)
- GameConqueror is a GUI based on Python and GTK using scanmem to locate
+ GameConqueror is a GUI based on Python and GTK+ using scanmem to locate
  the address of a variable in a running process. This can be used for the
  analysis or modification of a hostile process on a compromised machine, for
  reverse engineering, or as a "pokefinder" to cheat at video games.

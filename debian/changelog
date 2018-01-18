@@ -40,10 +40,13 @@ scanmem (0.17-1) unstable; urgency=medium
      + Added Vcs-* URLs.
      + Updated to Standards-Version 4.1.3
      + Bumped debhelper dependency to 11.
+     + Added myself as a uploader.
+     + Fixed typo: GTK->GTK+
+     + Removed Build-Deps on autotools-dev.
    * debian/compat:
      + Set compatibility to 11.
 
- -- Kartik Mistry <kartik@debian.org>  Thu, 18 Jan 2018 17:09:42 +0530
+ -- Kartik Mistry <kartik@debian.org>  Thu, 18 Jan 2018 18:17:56 +0530
 
 scanmem (0.16-1) unstable; urgency=medium
 
