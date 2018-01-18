@@ -1,5 +1,6 @@
 scanmem (0.17-1) unstable; urgency=medium
 
+  [ Sebastian Parschauer ]
   * New upstream release:
     + major performance improvement by inlining, new algorithms, and
       data as well as code optimization
@@ -32,7 +33,13 @@ scanmem (0.17-1) unstable; urgency=medium
     + configure: add `AM_PROG_CC_C_O` macro
     + gui: use Python3 shebang
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 16 Jan 2018 09:33:56 +0100
+   [ Kartik Mistry ]
+   * debian/copyright:
+     + http->https in URL.
+   * debian/control:
+     + Added Vcs-* URLs.
+
+ -- Kartik Mistry <kartik@debian.org>  Thu, 18 Jan 2018 09:34:32 +0530
 
 scanmem (0.16-1) unstable; urgency=medium
 
