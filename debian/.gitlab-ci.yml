@@ -14,13 +14,13 @@ build:
     - apt-get -y dist-upgrade
     - export BUILD_DEPENDS=`perl -ne 'next if /^#/; $p=(s/^Build-Depends:\s*/ / or (/^ / and $p)); s/,|\n|\([^)]+\)//mg; print if $p' < debian/control`
     - apt-get install -y --no-install-recommends
-        build-essential dpkg-dev fakeroot git-buildpackage pristine-tar $BUILD_DEPENDS
+        build-essential dpkg-dev fakeroot git-buildpackage lintian pristine-tar $BUILD_DEPENDS
     - apt-get -y autoremove --purge
     - apt-get clean
     - rm -rf /var/lib/apt/lists/*
     - dpkg-checkbuilddeps
     - echo "make master branch current for gbp"
     - git checkout -B "$CI_COMMIT_REF_NAME" "$CI_COMMIT_SHA"
-    - gbp buildpackage -us -uc
+    - gbp buildpackage -us -uc --lintian-opts -iIE --pedantic
     - cp ../scanmem_*.deb .
     - cp ../gameconqueror_*.deb .
