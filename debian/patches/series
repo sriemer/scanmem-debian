@@ -1,2 +1,3 @@
 fix-build-with-older-autotools.patch
 use-python3-shebang.patch
+gui-appdata-format-location.patch

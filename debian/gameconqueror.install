@@ -1,5 +1,5 @@
 usr/bin/gameconqueror
-usr/share/appdata/*appdata.xml usr/share/metainfo
+usr/share/metainfo/*appdata.xml
 usr/share/applications/GameConqueror.desktop
 usr/share/gameconqueror/*.png
 usr/share/gameconqueror/*.py

@@ -1,0 +1,70 @@
+From f331cbef5039bff43cdcfab7936e879036f8f9ca Mon Sep 17 00:00:00 2001
+From: Sebastian Parschauer <s.parschauer@gmx.de>
+Date: Fri, 19 Jan 2018 17:42:12 +0100
+Subject: [PATCH] gui: appdata: Use new format and location
+
+Lintian reports that our appdata uses legacy format and location.
+It refers to:
+https://www.freedesktop.org/software/appstream/docs/
+chap-Metadata.html#sect-Metadata-GenericComponent
+
+So adapt to the new "<id/>" element, rename "<updatecontact/>" to
+"<update_contact/>", and use the "<component/>" element instead
+of "<application/>". Also add the required "<image/>" element.
+Install to /usr/share/metainfo/ instead of /usr/share/appdata/.
+
+Verified-by: appstreamcli validate
+Fixes #295
+
+[sparschauer: Merge with "0cc3830 gui: Update screenshot ..."]
+Last-Update: 2018-01-20
+
+Patch-Name: gui-appdata-format-location.patch
+---
+ gui/GameConqueror.appdata.xml.in | 14 +++++++++-----
+ gui/Makefile.am                  |  2 +-
+ 2 files changed, 10 insertions(+), 6 deletions(-)
+
+diff --git a/gui/GameConqueror.appdata.xml.in b/gui/GameConqueror.appdata.xml.in
+index a99fce5..cce7d70 100644
+--- a/gui/GameConqueror.appdata.xml.in
++++ b/gui/GameConqueror.appdata.xml.in
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2014 Igor Gnatenko <i.gnatenko.brain@gmail.com> -->
+-<application>
+-  <id type="desktop">GameConqueror.desktop</id>
++<component type="desktop">
++  <id>com.github.GameConqueror</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0+</project_license>
+   <_name>Game Conqueror</_name>
+@@ -23,8 +23,12 @@
+   </ul>
+   </description>
+   <screenshots>
+-    <screenshot type="default" width="627" height="457">https://raw.githubusercontent.com/scanmem/scanmem/master/gui/screenshot.png</screenshot>
++    <screenshot type="default">
++      <image type="source" width="550" height="587">
++        https://raw.githubusercontent.com/scanmem/scanmem/master/gui/screenshot.png
++      </image>
++    </screenshot>
+   </screenshots>
+   <url type="homepage">https://github.com/scanmem/scanmem</url>
+-  <updatecontact>i.gnatenko.brain@gmail.com</updatecontact>
+-</application>
++  <update_contact>i.gnatenko.brain@gmail.com</update_contact>
++</component>
+diff --git a/gui/Makefile.am b/gui/Makefile.am
+index 8c27738..e86af9f 100644
+--- a/gui/Makefile.am
++++ b/gui/Makefile.am
+@@ -21,7 +21,7 @@ EXTRA_DIST = gameconqueror.in consts.py.in
+ 
+ desktopdir=$(datadir)/applications
+ polkitdir=$(datadir)/polkit-1/actions
+-appdatadir=$(datadir)/appdata
++appdatadir=$(datadir)/metainfo
+ 
+ install-data-hook:
+ 	chmod +x $(DESTDIR)$(gameconquerordir)/GameConqueror.py

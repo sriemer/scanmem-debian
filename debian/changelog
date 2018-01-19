@@ -32,6 +32,7 @@ scanmem (0.17-1) unstable; urgency=medium
     + remove all superseded patches
     + configure: add `AM_PROG_CC_C_O` macro
     + gui: use Python3 shebang
+    + gui: appdata: Use new format and location
 
    [ Kartik Mistry ]
    * debian/copyright:
