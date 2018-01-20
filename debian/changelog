@@ -28,11 +28,13 @@ scanmem (0.17-1) unstable; urgency=medium
     + change priority from 'extra' to 'optional'
   * debian/gameconqueror.install:
     + adapt to *.xml to *.ui renaming
+    + adapt to new metainfo files
   * debian/patches:
     + remove all superseded patches
     + configure: add `AM_PROG_CC_C_O` macro
     + gui: use Python3 shebang
     + gui: appdata: Use new format and location
+    + gui: Rename *.desktop.in and *.appdata.xml.in
 
    [ Kartik Mistry ]
    * debian/copyright:

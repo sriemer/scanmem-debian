@@ -1,0 +1,404 @@
+From 2faa48af52120cddc9a2867d6ab696223488aeaa Mon Sep 17 00:00:00 2001
+From: Sebastian Parschauer <s.parschauer@gmx.de>
+Date: Sat, 20 Jan 2018 15:16:48 +0100
+Subject: [PATCH] gui: Rename *.desktop.in and *.appdata.xml.in
+
+In order to use the new id "com.github.GameConqueror", both files
+have to have that prefix. To show that we use the new format, rename
+"appdata" to "metainfo".
+
+See: https://wiki.debian.org/AppStream/Guidelines
+
+Reference: #295
+
+Last-Update: 2018-01-20
+
+Patch-Name: gui-rename-metainfo-desktop.patch
+---
+ gui/Makefile.am                                          |  4 ++--
+ ...or.desktop.in => com.github.GameConqueror.desktop.in} |  0
+ ...a.xml.in => com.github.GameConqueror.metainfo.xml.in} |  0
+ po/POTFILES.in                                           |  4 ++--
+ po/de.po                                                 | 16 ++++++++--------
+ po/es.po                                                 | 16 ++++++++--------
+ po/it.po                                                 | 16 ++++++++--------
+ po/ja.po                                                 | 16 ++++++++--------
+ po/ru.po                                                 | 16 ++++++++--------
+ po/sr_ME.po                                              | 16 ++++++++--------
+ 10 files changed, 52 insertions(+), 52 deletions(-)
+ rename gui/{GameConqueror.desktop.in => com.github.GameConqueror.desktop.in} (100%)
+ rename gui/{GameConqueror.appdata.xml.in => com.github.GameConqueror.metainfo.xml.in} (100%)
+
+diff --git a/gui/Makefile.am b/gui/Makefile.am
+index e86af9f..801b93c 100644
+--- a/gui/Makefile.am
++++ b/gui/Makefile.am
+@@ -6,13 +6,13 @@ pythondir = $(gameconquerordir)
+ dist_bin_SCRIPTS = gameconqueror
+ dist_gameconqueror_DATA = GameConqueror.ui GameConqueror_128x128.png \
+                           GameConqueror_72x72.png GameConqueror_48x48.png
+-dist_desktop_in_files = GameConqueror.desktop.in
++dist_desktop_in_files = com.github.GameConqueror.desktop.in
+ dist_desktop_DATA = $(dist_desktop_in_files:.desktop.in=.desktop)
+ @INTLTOOL_DESKTOP_RULE@
+ dist_polkit_in_files = org.freedesktop.gameconqueror.policy.in
+ dist_polkit_DATA = $(dist_polkit_in_files:.policy.in=.policy)
+ @INTLTOOL_POLICY_RULE@
+-dist_appdata_in_files = GameConqueror.appdata.xml.in
++dist_appdata_in_files = com.github.GameConqueror.metainfo.xml.in
+ dist_appdata_DATA = $(dist_appdata_in_files:.xml.in=.xml)
+ @INTLTOOL_XML_RULE@
+ dist_man_MANS = gameconqueror.1
+diff --git a/gui/GameConqueror.desktop.in b/gui/com.github.GameConqueror.desktop.in
+similarity index 100%
+rename from gui/GameConqueror.desktop.in
+rename to gui/com.github.GameConqueror.desktop.in
+diff --git a/gui/GameConqueror.appdata.xml.in b/gui/com.github.GameConqueror.metainfo.xml.in
+similarity index 100%
+rename from gui/GameConqueror.appdata.xml.in
+rename to gui/com.github.GameConqueror.metainfo.xml.in
+diff --git a/po/POTFILES.in b/po/POTFILES.in
+index 682e15c..d5db0d7 100644
+--- a/po/POTFILES.in
++++ b/po/POTFILES.in
+@@ -1,6 +1,6 @@
+ [type: gettext/glade]gui/GameConqueror.ui
+ gui/GameConqueror.py
+ gui/misc.py
+-gui/GameConqueror.desktop.in
++gui/com.github.GameConqueror.desktop.in
+ gui/org.freedesktop.gameconqueror.policy.in.in
+-gui/GameConqueror.appdata.xml.in
++gui/com.github.GameConqueror.metainfo.xml.in
+diff --git a/po/de.po b/po/de.po
+index abc481c..4ae5ca9 100644
+--- a/po/de.po
++++ b/po/de.po
+@@ -480,11 +480,11 @@ msgstr "%s ist zu groß für %s"
+ msgid "Cannot locate item: %s"
+ msgstr "Kann %s nicht finden"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:1 ../gui/GameConqueror.appdata.xml.in.h:1
++#: ../gui/com.github.GameConqueror.desktop.in.h:1 ../gui/com.github.GameConqueror.metainfo.xml.in.h:1
+ msgid "Game Conqueror"
+ msgstr "Game Conqueror"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:2
++#: ../gui/com.github.GameConqueror.desktop.in.h:2
+ msgid "A game hacking tool. A GUI front-end for scanmem."
+ msgstr "Eine grafische Oberfläche für scanmem, ein Werkzeug zur Speichermanipulation"
+ 
+@@ -496,11 +496,11 @@ msgstr "GameConqueror ausführen"
+ msgid "Authentication is required to run Game Conqueror"
+ msgstr "Authorisierung ist notwendig für Game Conqueror"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:2
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:2
+ msgid "Game hacking tool. GUI front-end for scanmem."
+ msgstr "Eine grafische Oberfläche für scanmem, ein Werkzeug zur Speichermanipulation"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:3
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:3
+ msgid ""
+ "scanmem is a simple interactive debugging utility, used to locate the "
+ "address of a variable in an executing process. This can be used for the "
+@@ -517,18 +517,18 @@ msgstr ""
+ "CheatEngine-ähnliche Schnittstelle für scanmem bereitzustellen. "
+  
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:4
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:4
+ msgid "Features:"
+ msgstr "Funktionen:"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:5
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:5
+ msgid "Locking on multiple variables"
+ msgstr "Mehrere Variablen einfrieren"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:6
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:6
+ msgid "Memory Viewer/Editor"
+ msgstr "Speichereditor"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:7
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:7
+ msgid "... many to be done"
+ msgstr "... viele weitere"
+diff --git a/po/es.po b/po/es.po
+index 46033a7..76697ee 100644
+--- a/po/es.po
++++ b/po/es.po
+@@ -477,11 +477,11 @@ msgstr "%s es muy grande para %s"
+ msgid "Cannot locate item: %s"
+ msgstr "No puede encontrar item: %s"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:1 ../gui/GameConqueror.appdata.xml.in.h:1
++#: ../gui/com.github.GameConqueror.desktop.in.h:1 ../gui/com.github.GameConqueror.metainfo.xml.in.h:1
+ msgid "Game Conqueror"
+ msgstr "Game Conqueror"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:2
++#: ../gui/com.github.GameConqueror.desktop.in.h:2
+ msgid "A game hacking tool. A GUI front-end for scanmem."
+ msgstr "Una herramienta de hackeo de juegos. Una interfaz gráfica para scanmem."
+ 
+@@ -493,11 +493,11 @@ msgstr "Ejecutar Game Conqueror"
+ msgid "Authentication is required to run Game Conqueror"
+ msgstr "Se requiere autenticación para correr Game Conqueror"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:2
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:2
+ msgid "Game hacking tool. GUI front-end for scanmem."
+ msgstr "Herramienta de hackeo de juegos. Interfaz gráfica para scanmem."
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:3
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:3
+ msgid ""
+ "scanmem is a simple interactive debugging utility, used to locate the "
+ "address of a variable in an executing process. This can be used for the "
+@@ -513,18 +513,18 @@ msgstr ""
+ "GameConqueror busca proveer una interfaz estilo CheatEngine para scanmem, "
+ "es amigable y fácil de usar."
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:4
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:4
+ msgid "Features:"
+ msgstr "Características:"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:5
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:5
+ msgid "Locking on multiple variables"
+ msgstr "Bloqueo en mútliples variables"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:6
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:6
+ msgid "Memory Viewer/Editor"
+ msgstr "Visor/Editor de memoria"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:7
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:7
+ msgid "... many to be done"
+ msgstr "... muchas a completar"
+diff --git a/po/it.po b/po/it.po
+index aa724e5..80b661c 100644
+--- a/po/it.po
++++ b/po/it.po
+@@ -483,11 +483,11 @@ msgstr "%s è troppo grande per %s"
+ msgid "Cannot locate item: %s"
+ msgstr "Impossibile trovare: %s"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:1 ../gui/GameConqueror.appdata.xml.in.h:1
++#: ../gui/com.github.GameConqueror.desktop.in.h:1 ../gui/com.github.GameConqueror.metainfo.xml.in.h:1
+ msgid "Game Conqueror"
+ msgstr "Game Conqueror"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:2
++#: ../gui/com.github.GameConqueror.desktop.in.h:2
+ msgid "A game hacking tool. A GUI front-end for scanmem."
+ msgstr "Uno strumento per barare ai videogiochi. Una GUI per scanmem."
+ 
+@@ -499,11 +499,11 @@ msgstr "Avvia Game Conqueror"
+ msgid "Authentication is required to run Game Conqueror"
+ msgstr "È necessario autenticarsi per avviare Game Conqueror"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:2
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:2
+ msgid "Game hacking tool. GUI front-end for scanmem."
+ msgstr "Uno strumento per barare ai videogiochi. GUI per scanmem."
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:3
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:3
+ msgid ""
+ "scanmem is a simple interactive debugging utility, used to locate the "
+ "address of a variable in an executing process. This can be used for the "
+@@ -519,18 +519,18 @@ msgstr ""
+ "GameConqueror mira a fornire un'interfaccia per scanmem, simile a "
+ "CheatEngine, è user-friendly e semplice da usare."
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:4
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:4
+ msgid "Features:"
+ msgstr "Caratteristiche:"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:5
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:5
+ msgid "Locking on multiple variables"
+ msgstr "Blocco di multiple variabili"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:6
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:6
+ msgid "Memory Viewer/Editor"
+ msgstr "Editor di memoria"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:7
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:7
+ msgid "... many to be done"
+ msgstr "... e molto altro"
+diff --git a/po/ja.po b/po/ja.po
+index 3331686..2c62390 100644
+--- a/po/ja.po
++++ b/po/ja.po
+@@ -493,11 +493,11 @@ msgstr "%s は %s で表現できる範囲を超えています"
+ msgid "Cannot locate item: %s"
+ msgstr "%s という項目は見つかりません"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:1 ../gui/GameConqueror.appdata.xml.in.h:1
++#: ../gui/com.github.GameConqueror.desktop.in.h:1 ../gui/com.github.GameConqueror.metainfo.xml.in.h:1
+ msgid "Game Conqueror"
+ msgstr ""
+ 
+-#: ../gui/GameConqueror.desktop.in.h:2
++#: ../gui/com.github.GameConqueror.desktop.in.h:2
+ msgid "A game hacking tool. A GUI front-end for scanmem."
+ msgstr "ゲーム向けプロセスメモリエディタ(scanmem GUI フロントエンド)"
+ 
+@@ -509,11 +509,11 @@ msgstr ""
+ msgid "Authentication is required to run Game Conqueror"
+ msgstr ""
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:2
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:2
+ msgid "Game hacking tool. GUI front-end for scanmem."
+ msgstr "ゲーム向けプロセスメモリエディタ(scanmem GUI フロントエンド)"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:3
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:3
+ msgid ""
+ "scanmem is a simple interactive debugging utility, used to locate the "
+ "address of a variable in an executing process. This can be used for the "
+@@ -523,19 +523,19 @@ msgid ""
+ "it's user-friendly and easy to use."
+ msgstr ""
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:4
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:4
+ msgid "Features:"
+ msgstr ""
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:5
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:5
+ msgid "Locking on multiple variables"
+ msgstr ""
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:6
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:6
+ msgid "Memory Viewer/Editor"
+ msgstr "メモリエディタ"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:7
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:7
+ msgid "... many to be done"
+ msgstr ""
+ 
+diff --git a/po/ru.po b/po/ru.po
+index c9d2b6e..ae41e70 100644
+--- a/po/ru.po
++++ b/po/ru.po
+@@ -492,11 +492,11 @@ msgstr "%s слишком большой для %s"
+ msgid "Cannot locate item: %s"
+ msgstr "Невозможно найти запись: %s"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:1 ../gui/GameConqueror.appdata.xml.in.h:1
++#: ../gui/com.github.GameConqueror.desktop.in.h:1 ../gui/com.github.GameConqueror.metainfo.xml.in.h:1
+ msgid "Game Conqueror"
+ msgstr ""
+ 
+-#: ../gui/GameConqueror.desktop.in.h:2
++#: ../gui/com.github.GameConqueror.desktop.in.h:2
+ msgid "A game hacking tool. A GUI front-end for scanmem."
+ msgstr "Инструмент для взлома игр (графический интерфейс к scanmem)"
+ 
+@@ -509,11 +509,11 @@ msgid "Authentication is required to run Game Conqueror"
+ msgstr ""
+ "Для запуска Game Conqueror требуется подтверждение подлинности пользователя"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:2
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:2
+ msgid "Game hacking tool. GUI front-end for scanmem."
+ msgstr "Инструмент для взлома игр (графический интерфейс к scanmem)"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:3
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:3
+ msgid ""
+ "scanmem is a simple interactive debugging utility, used to locate the "
+ "address of a variable in an executing process. This can be used for the "
+@@ -523,19 +523,19 @@ msgid ""
+ "it's user-friendly and easy to use."
+ msgstr ""
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:4
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:4
+ msgid "Features:"
+ msgstr "Возможности:"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:5
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:5
+ msgid "Locking on multiple variables"
+ msgstr "Замораживание мнножества переменных"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:6
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:6
+ msgid "Memory Viewer/Editor"
+ msgstr "Редактор/Просмотрщик Памяти"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:7
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:7
+ msgid "... many to be done"
+ msgstr ""
+ 
+diff --git a/po/sr_ME.po b/po/sr_ME.po
+index cc5cdfb..384a203 100644
+--- a/po/sr_ME.po
++++ b/po/sr_ME.po
+@@ -483,11 +483,11 @@ msgstr "%s je preveliki za %s"
+ msgid "Cannot locate item: %s"
+ msgstr "Ne mogu da pronađem: %s"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:1 ../gui/GameConqueror.appdata.xml.in.h:1
++#: ../gui/com.github.GameConqueror.desktop.in.h:1 ../gui/com.github.GameConqueror.metainfo.xml.in.h:1
+ msgid "Game Conqueror"
+ msgstr "Game Conqueror"
+ 
+-#: ../gui/GameConqueror.desktop.in.h:2
++#: ../gui/com.github.GameConqueror.desktop.in.h:2
+ msgid "A game hacking tool. A GUI front-end for scanmem."
+ msgstr "Alat za hakovanje igrica. Grafički prikaz za scanmem"
+ 
+@@ -499,11 +499,11 @@ msgstr "Pokreni Game Conqueror"
+ msgid "Authentication is required to run Game Conqueror"
+ msgstr "Autentifikacija je potrebna za pokretanje"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:2
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:2
+ msgid "Game hacking tool. GUI front-end for scanmem."
+ msgstr "Alat za hakovanje igrica. Grafički prikaz za scanmem"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:3
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:3
+ msgid ""
+ "scanmem is a simple interactive debugging utility, used to locate the "
+ "address of a variable in an executing process. This can be used for the "
+@@ -520,18 +520,18 @@ msgstr ""
+ "CheatEngine-alike za skeniranje, jednostavan za korišćenje i jednostavan za "
+ "korišćenje."
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:4
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:4
+ msgid "Features:"
+ msgstr "Karakteristike:"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:5
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:5
+ msgid "Locking on multiple variables"
+ msgstr "Zaključavam višestruke promijenjiljive"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:6
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:6
+ msgid "Memory Viewer/Editor"
+ msgstr "Izmjenjivač/pregledaš memorije"
+ 
+-#: ../gui/GameConqueror.appdata.xml.in.h:7
++#: ../gui/com.github.GameConqueror.metainfo.xml.in.h:7
+ msgid "... many to be done"
+ msgstr "... Mnogi će biti učinjeni"
