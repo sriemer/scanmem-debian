@@ -47,8 +47,10 @@ scanmem (0.17-1) unstable; urgency=medium
      + Set compatibility to 11.
    * debian/gameconqueror.install:
      + Fixed installation of *appdata.xml files.
+   * debian/watch:
+     + Use version 4.
 
- -- Kartik Mistry <kartik@debian.org>  Thu, 18 Jan 2018 18:32:49 +0530
+ -- Kartik Mistry <kartik@debian.org>  Sat, 20 Jan 2018 05:35:03 +0530
 
 scanmem (0.16-1) unstable; urgency=medium
 
