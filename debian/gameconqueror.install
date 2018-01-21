@@ -1,6 +1,6 @@
 usr/bin/gameconqueror
-usr/share/metainfo/*metainfo.xml
-usr/share/applications/*GameConqueror.desktop
+usr/share/metainfo/*.metainfo.xml
+usr/share/applications/*.desktop
 usr/share/gameconqueror/*.png
 usr/share/gameconqueror/*.py
 usr/share/gameconqueror/*.ui
