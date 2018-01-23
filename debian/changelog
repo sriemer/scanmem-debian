@@ -1,11 +1,13 @@
-scanmem (0.17-2) UNRELEASED; urgency=low
+scanmem (0.17-2) unstable; urgency=low
 
+  * debian/copyright:
+    + update for 0.17
   * debian/gameconqueror.install:
     + adapt metainfo files to final upstream state
   * debian/patches:
     + update the metainfo patches to final upstream state
 
- -- Sebastian Parschauer <s.parschauer@gmx.de>  Sun, 21 Jan 2018 23:05:36 +0100
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Tue, 23 Jan 2018 08:34:11 +0100
 
 scanmem (0.17-1) unstable; urgency=medium
 
