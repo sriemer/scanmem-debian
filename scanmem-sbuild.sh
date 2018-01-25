@@ -1,7 +1,8 @@
 #!/bin/bash
 
-VERS=0.17
-RELS=1
+DEBRELS=`cat debian/changelog | head -n1 | grep -o "(.*)" | tr -d "()"`
+VERS=`echo "${DEBRELS}" | cut -d '-' -f1`
+RELS=`echo "${DEBRELS}" | cut -d '-' -f2`
 
 git branch -D source
 git checkout -b source
