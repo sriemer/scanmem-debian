@@ -1,0 +1,63 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 23 Jan 2018 08:34:11 +0100
+Source: scanmem
+Binary: scanmem gameconqueror
+Architecture: source all amd64
+Version: 0.17-2
+Distribution: unstable
+Urgency: low
+Maintainer: Sebastian Parschauer <s.parschauer@gmx.de>
+Changed-By: Sebastian Parschauer <s.parschauer@gmx.de>
+Description:
+ gameconqueror - locate and modify a variable in a running process (GUI)
+ scanmem    - locate and modify a variable in a running process
+Changes:
+ scanmem (0.17-2) unstable; urgency=low
+ .
+   * debian/copyright:
+     + update for 0.17
+   * debian/gameconqueror.install:
+     + adapt metainfo files to final upstream state
+   * debian/patches:
+     + update the metainfo patches to final upstream state
+Checksums-Sha1:
+ 222884b229a55a9a0aada23d1b0e3d6630aa0487 1974 scanmem_0.17-2.dsc
+ 476bb816a93d79977019c80eca9d86fe7e8f6dc2 10164 scanmem_0.17-2.debian.tar.xz
+ 31063eaaf2ee0d8ed6230324089b9a96cb00b84c 59584 gameconqueror_0.17-2_all.deb
+ 5b8bcb0b690a85b2bd4f3d1a94598407ebd3f959 152276 scanmem-dbgsym_0.17-2_amd64.deb
+ c062d9ffdc1ca59b5e378506943eb1c4f4762e92 7146 scanmem_0.17-2_amd64.buildinfo
+ ec75e969e541bf567eeba741a9d33098836276ab 58108 scanmem_0.17-2_amd64.deb
+Checksums-Sha256:
+ 3a3b34a1746ece2f76895ab1afb89232d89db1a3aa05a6b78a04e98e76bd7219 1974 scanmem_0.17-2.dsc
+ 0db7f99f41af4d0f4843a6aa0a5d0dcf5f5de4d0fb711f7c74cf564233a23981 10164 scanmem_0.17-2.debian.tar.xz
+ 38746f68863a7f26b05604496702c6e27b3b0ab372aade6145319d6d7e24eea2 59584 gameconqueror_0.17-2_all.deb
+ 9f0ff4e8cf65c2957415a8dc1fdecaff188456c4ef649b89682be294268b0ea5 152276 scanmem-dbgsym_0.17-2_amd64.deb
+ 696b0cd968ecd58869641021f8392d3f8cbed08e7d9be0c48bf88258a3e83d60 7146 scanmem_0.17-2_amd64.buildinfo
+ cb76559907f4992717765e3f8f2b281829cf301d7da5c08348ab3e2e453895a8 58108 scanmem_0.17-2_amd64.deb
+Files:
+ 6e67e9f3980c1b196000a13da4a038b1 1974 utils optional scanmem_0.17-2.dsc
+ 45c18c305aa54fe3cdbc3e6d21a6a62d 10164 utils optional scanmem_0.17-2.debian.tar.xz
+ 473e2c9f59cc72c7f06fa9fcddd6549c 59584 utils optional gameconqueror_0.17-2_all.deb
+ a16fc91520eaadfdaa7c33b0dcbbab83 152276 debug optional scanmem-dbgsym_0.17-2_amd64.deb
+ 68bbe90ec7ac715f55cce13a9cdc4b75 7146 utils optional scanmem_0.17-2_amd64.buildinfo
+ 3fb4a5a2d84f4b9ec1b0d07170683a06 58108 utils optional scanmem_0.17-2_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEE9XhRjchJA9ovPDUW2QA8foSSdWUFAlppoDcACgkQ2QA8foSS
+dWX9Ew/9Gajs2YltChoRGUd7hRWudANhsNKna/DyI22UkARcwxthf5DJzQDdxSzJ
+MBZQu9zhU/vuTJ3fC7rChaLn2YHwkxUlVGA61sspqf949UeqiM9oFSsI+l7F/rVq
+usFM13ysa6ptxyvt47rI1+iEAWq8F1fV2S7hVXriaK1EP05LcTZBDDCFDJL31QFb
+Jiadu6Su/PbyIgLcDC9tRuFNGvPiqqd2M7DilVr7fObXzSbyjQZAm0eZko/DNzPD
+WTuglpF+Alip/JM/73HAiUoBzRE5cOIk9cpWRBfmr3H8x0kk3MMHP8thJAQwyfaW
+nC8agtB6KzPTLLZ8XTT0dzkTKBpcMV3IIgmtmThjXL63fAyGMxFVyTm5VdmChmgn
+rZd3wYwyKKhK0qlDn1GapNZkHjwGehdpmjByZweMsxR+XdDRV6+5RieIHbeViILd
+R7u4nZwC/N+9JQF1QX1Ng4za0fjCvqAX9r7mXRGiZR6nLnb1tgy1m2XblKBNhmXg
+qEKQwmTRUU4EDMbBQZGrJ7/kT8+rhz3qXA3vm1AQ03RsJamj9AjluQuAsLOYPz9q
+H2+HHFWvreG/gCfevAZO5M1fwQrQgbmGzj4fi1oGX04d97SvJwvwIkxPQi0wInU3
+IE1WvoIabMLm3wLNXtEwaOBDlI8ep1DL//3ji4L8atHZmxQNoN8=
+=TH6y
+-----END PGP SIGNATURE-----
