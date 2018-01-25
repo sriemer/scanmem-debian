@@ -1,0 +1,55 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Format: 1.8
+Date: Tue, 23 Jan 2018 08:34:11 +0100
+Source: scanmem
+Binary: scanmem gameconqueror
+Architecture: source
+Version: 0.17-2
+Distribution: unstable
+Urgency: low
+Maintainer: Sebastian Parschauer <s.parschauer@gmx.de>
+Changed-By: Sebastian Parschauer <s.parschauer@gmx.de>
+Description:
+ gameconqueror - locate and modify a variable in a running process (GUI)
+ scanmem    - locate and modify a variable in a running process
+Changes:
+ scanmem (0.17-2) unstable; urgency=low
+ .
+   * debian/copyright:
+     + update for 0.17
+   * debian/gameconqueror.install:
+     + adapt metainfo files to final upstream state
+   * debian/patches:
+     + update the metainfo patches to final upstream state
+Checksums-Sha1:
+ 89b594fddcda99f7d22a5c817be953a74a0421b7 2003 scanmem_0.17-2.dsc
+ 476bb816a93d79977019c80eca9d86fe7e8f6dc2 10164 scanmem_0.17-2.debian.tar.xz
+ b04603d9ef4baf4948009bf295bef51099003e0a 6668 scanmem_0.17-2_source.buildinfo
+Checksums-Sha256:
+ adb3395329f73b2a5041bebc0206b09260eb26ef17a1e8a81583952817142615 2003 scanmem_0.17-2.dsc
+ 0db7f99f41af4d0f4843a6aa0a5d0dcf5f5de4d0fb711f7c74cf564233a23981 10164 scanmem_0.17-2.debian.tar.xz
+ ae5f91244f9eecd74cfe3138c40ec35accb40c1e153d874a0cac12b45ac49d45 6668 scanmem_0.17-2_source.buildinfo
+Files:
+ f44d7a7a9f960c5f119b5415794e50c1 2003 utils optional scanmem_0.17-2.dsc
+ 45c18c305aa54fe3cdbc3e6d21a6a62d 10164 utils optional scanmem_0.17-2.debian.tar.xz
+ 95ec9bcb6dec31a19890867ad4d05028 6668 utils optional scanmem_0.17-2_source.buildinfo
+
+-----BEGIN PGP SIGNATURE-----
+
+iQJIBAEBCAAyFiEE9XhRjchJA9ovPDUW2QA8foSSdWUFAlppntgUHHMucGFyc2No
+YXVlckBnbXguZGUACgkQ2QA8foSSdWWW4xAAh0ASdqQ5AYx2TnKIweU8VQZlTpne
+3Yk0iYLOFMhf1WjQTxhXWVbFA9hyB0MCQLCCjCijBs9ibj9Oj/rI2Nr6+U18zdr7
+NMzMyGwHecw+nInaACC8HTfRvij6hzug71KkIaPxxjeYr1j0+PyJRR+DLyI8n/J2
+96riKuzbwDdzIucvRM8ifxIW20dBZD+5DfBqwUEoz5tXVc5cJCZLAMGjdi3QrAyg
+uxUGOyh7VDpic+j59GKEHX/FnvGl4RQbL67iF6AjphoZioGAJl4SJqv/t3coNqHR
+FaCCtO0qNDMdqSBFEury3DJwyEM1ps8G9ivOKBFWsWNKDUlr1SrDMnJg6G/D43Wc
+37afaqeF+dvDmgGx4sp+bvy/2+qtxOY//VMLd7L++xzHmWJ//GiRe3KmD42TFcUQ
+lguZFWDVXEGAt+Yl225tNOhY90T/LFXRnZpIx7tiEJ+wuNAVk2SwazzGKKWvwKia
+XfrpjDVme3Dd8ZMiyiNk8dsYQkbkjc6mFNiq1GAyQqxBLCZQP++HuC7QoPB3ONeA
+zRyEY/JmEw35Q7VqQPMdBuQDczRDkpbmnVuCMt9ORC4mdt7j0rpYwaIF4Q8gqVJ3
+nC+LvXzSJIzfj1Yoz6SkFa4mFqOjLtjZxWvww9WSd119hkx2lKvqf5K8OJag0Z/m
+43yT9DTZEcjc4p4=
+=Arlh
+-----END PGP SIGNATURE-----

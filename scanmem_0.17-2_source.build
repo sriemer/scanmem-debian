@@ -1,0 +1,42 @@
+ dpkg-buildpackage -rfakeroot -us -uc -S
+dpkg-buildpackage: Information: Quellpaket scanmem
+dpkg-buildpackage: Information: Quellversion 0.17-2
+dpkg-buildpackage: Information: Quelldistribution unstable
+dpkg-buildpackage: Information: Quelle geändert durch Sebastian Parschauer <s.parschauer@gmx.de>
+ dpkg-source --before-build scanmem
+dpkg-source: Information: fix-build-with-older-autotools.patch wird angewandt
+dpkg-source: Information: use-python3-shebang.patch wird angewandt
+dpkg-source: Information: gui-appdata-format-location.patch wird angewandt
+dpkg-source: Information: gui-rename-metainfo-desktop.patch wird angewandt
+ fakeroot debian/rules clean
+dh clean --with python3
+   dh_testdir
+   dh_auto_clean
+   dh_clean
+ dpkg-source -b scanmem
+dpkg-source: Information: Quellformat »3.0 (quilt)« wird verwendet
+dpkg-source: Information: scanmem wird unter Benutzung des existierenden ./scanmem_0.17.orig.tar.gz gebaut
+dpkg-source: Information: scanmem wird in scanmem_0.17-2.debian.tar.xz gebaut
+dpkg-source: Information: scanmem wird in scanmem_0.17-2.dsc gebaut
+ dpkg-genbuildinfo --build=source
+ dpkg-genchanges --build=source >../scanmem_0.17-2_source.changes
+dpkg-genchanges: Information: Originalquellen beim Hochladen nicht hinzufügen
+ dpkg-source --after-build scanmem
+dpkg-source: Information: Patch gui-rename-metainfo-desktop.patch wird entfernt
+dpkg-source: Information: Patch gui-appdata-format-location.patch wird entfernt
+dpkg-source: Information: Patch use-python3-shebang.patch wird entfernt
+dpkg-source: Information: Patch fix-build-with-older-autotools.patch wird entfernt
+dpkg-buildpackage: Information: Binärpakete(e) und Diff hochzuladen (Originalquellen NICHT enthalten)
+Now running lintian...
+Finished running lintian.
+Now signing changes and any dsc files...
+ signfile dsc scanmem_0.17-2.dsc Sebastian Parschauer <s.parschauer@gmx.de>
+
+ fixup_buildinfo scanmem_0.17-2.dsc scanmem_0.17-2_source.buildinfo
+ signfile buildinfo scanmem_0.17-2_source.buildinfo Sebastian Parschauer <s.parschauer@gmx.de>
+
+ fixup_changes dsc scanmem_0.17-2.dsc scanmem_0.17-2_source.changes
+ fixup_changes buildinfo scanmem_0.17-2_source.buildinfo scanmem_0.17-2_source.changes
+ signfile changes scanmem_0.17-2_source.changes Sebastian Parschauer <s.parschauer@gmx.de>
+
+Successfully signed dsc, buildinfo, changes files
