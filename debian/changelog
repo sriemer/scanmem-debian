@@ -1,3 +1,10 @@
+scanmem (0.17-0sp2) bionic; urgency=medium
+
+  * revert back to debhelper 9 for compat
+  * build for Ubuntu game-cheating PPA
+
+ -- Sebastian Parschauer <s.parschauer@gmx.de>  Thu, 25 Jan 2018 09:34:51 +0100
+
 scanmem (0.17-2) unstable; urgency=low
 
   * debian/copyright:
